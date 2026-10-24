@@ -1010,60 +1010,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "senulun-agent"
-version = "0.1.0-alpha.27"
-dependencies = [
- "senulun-protocol",
- "reqwest",
- "rustix",
- "serde",
- "serde_json",
- "sysinfo",
- "tempfile",
- "tokio",
- "tracing",
- "tracing-subscriber",
- "uuid",
-]
-
-[[package]]
-name = "senulun-protocol"
-version = "0.1.0-alpha.27"
-dependencies = [
- "serde",
- "serde_json",
-]
-
-[[package]]
-name = "senulun-service"
-version = "0.1.0-alpha.27"
-dependencies = [
- "argon2",
- "axum",
- "base64 0.23.1",
- "hex",
- "mime_guess",
- "senulun-protocol",
- "reqwest",
- "ring",
- "rusqlite",
- "rust-embed",
- "serde",
- "serde_json",
- "sha2",
- "subtle",
- "tempfile",
- "time",
- "tokio",
- "totp-rs",
- "tower",
- "tracing",
- "tracing-subscriber",
- "uuid",
- "zip",
-]
-
-[[package]]
 name = "quinn"
 version = "0.11.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1433,6 +1379,60 @@ name = "semver"
 version = "1.0.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8a7852d02fc848982e0c167ef163aaff9cd91dc640ba85e263cb1ce46fae51cd"
+
+[[package]]
+name = "senulun-agent"
+version = "0.1.0-alpha.27"
+dependencies = [
+ "reqwest",
+ "rustix",
+ "senulun-protocol",
+ "serde",
+ "serde_json",
+ "sysinfo",
+ "tempfile",
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
+ "uuid",
+]
+
+[[package]]
+name = "senulun-protocol"
+version = "0.1.0-alpha.27"
+dependencies = [
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "senulun-service"
+version = "0.1.0-alpha.27"
+dependencies = [
+ "argon2",
+ "axum",
+ "base64 0.23.1",
+ "hex",
+ "mime_guess",
+ "reqwest",
+ "ring",
+ "rusqlite",
+ "rust-embed",
+ "senulun-protocol",
+ "serde",
+ "serde_json",
+ "sha2",
+ "subtle",
+ "tempfile",
+ "time",
+ "tokio",
+ "totp-rs",
+ "tower",
+ "tracing",
+ "tracing-subscriber",
+ "uuid",
+ "zip",
+]
 
 [[package]]
 name = "serde"
@@ -1919,9 +1919,9 @@ checksum = "e421abadd41a4225275504ea4d6566923418b7f05506fbc9c0fe86ba7396114b"
 
 [[package]]
 name = "typed-path"
-version = "0.12.3"
+version = "0.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8e28f89b80c87b8fb0cf04ab448d5dd0dd0ade2f8891bae878de66a75a28600e"
+checksum = "9ce898823d8cd0f028662d2f349694b1af0a5cc9be83f1d213a00d3147445e1e"
 
 [[package]]
 name = "typenum"
@@ -2419,16 +2419,18 @@ dependencies = [
 
 [[package]]
 name = "zip"
-version = "9.0.4"
+version = "9.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a954114b47a54df49f83d2722814e86b23d4bb1b54a1b90fb7d92b41619ddc22"
+checksum = "2886b00003a72c4ccee3f42cfc34908d33b2508a74d827dc2a4244706475c704"
 dependencies = [
  "crc32fast",
  "flate2",
+ "getrandom 0.4.3",
  "indexmap",
  "memchr",
  "nix",
  "typed-path",
+ "windows-sys 0.61.2",
  "zopfli",
 ]
 
